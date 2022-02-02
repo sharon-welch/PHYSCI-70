@@ -28,6 +28,11 @@ a[href* = './aboutme'] {
   color: red;
 }
 
+#headshot {
+  max-width: auto;
+  height: 50%;
+}
+
 .footer {
   position: fixed;
   left: 0;
