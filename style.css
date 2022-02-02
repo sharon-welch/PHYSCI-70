@@ -1,0 +1,45 @@
+* {
+  font-family: Tahoma;
+}
+
+.header {
+  padding: 60px;
+  text-align: right;
+  background: white;
+  color: black;
+  font-size: 15px;
+}
+
+.header[p] {
+  text-align: left;
+}
+
+a {
+  padding: 15px;
+  color: darkgray;
+  background:#99e6b3;
+}
+
+a:hover {
+  background: #702963;
+}
+
+a[href* = './aboutme'] {
+  color: red;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 60px;
+  text-align: left;
+  background: #99e6b3;
+  color: white;
+  font-size: 10px;
+}
+
+.final_proj {
+  margin-left: 30px;
+}
