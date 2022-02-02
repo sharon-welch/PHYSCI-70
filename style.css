@@ -1,5 +1,5 @@
 * {
-  font-family: Tahoma;
+  font-family: Georgia;
 }
 
 .header {
@@ -11,13 +11,14 @@
 }
 
 .header[p] {
-  text-align: left;
+  text-align: right;
 }
 
 a {
   padding: 15px;
   color: darkgray;
   background:#99e6b3;
+  text-decoration: none;
 }
 
 a:hover {
@@ -26,6 +27,9 @@ a:hover {
 
 a[href* = './aboutme'] {
   color: red;
+}
+
+.row {
 }
 
 #headshot {
