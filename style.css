@@ -14,6 +14,11 @@
   text-align: right;
 }
 
+.title {
+    text-align: left;
+    margin-left: 100px;
+}
+
 a {
   padding: 15px;
   color: darkgray;
