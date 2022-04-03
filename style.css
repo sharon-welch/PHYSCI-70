@@ -42,9 +42,15 @@ a[href* = './aboutme'] {
   height: 50%;
 }
 
-img{
+/* img{
   max-height: 300px;
   max-width: auto;
+  padding-bottom: 40px;
+} */
+
+img{
+  height: auto;
+  width: 100%;
   padding-bottom: 40px;
 }
 
