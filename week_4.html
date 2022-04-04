@@ -1,4 +1,4 @@
-<html><html>
+<html>
   <head>
     <title> Sharon Welch </title>
     <link href='style.css' rel='stylesheet'>
@@ -24,12 +24,15 @@
             <br>
           <p><strong>Skills used: </strong>Arduino, C Programming Language</p>
             <br>
-          <p>This week I experimented with programming LEDs</p>
+          <p>This week I experimented with programming LEDs. This week I experimented with programming LEDs to create a circuit that would allow me to turn a series of LEDs on with a button. </p>
         </div>
 
         <div class = "container">
           <div class = "row">
             <div class = "col">
+              <video width = "320" height="auto">
+                <source src = './week_4_media/led_piano_1.MOV'>
+              </video>
               <!-- INSERT IMAGE OR TEXT -->
             </div>
             <div class = "col">
@@ -38,6 +41,59 @@
           </div>
 
           <div class = "row">
+            <p><strong>Process: </strong>
+              I experimented first with creating a series of blinking LEDs through modifying the code found <a href = "https://www.youtube.com/watch?v=e1FVSpkw6q4">here</a>.
+            </p>
+
+          </div>
+
+          <div class = "row">
+            <div class = "col">
+
+            </div>
+            <div class = "col">
+            </div>
+
+          </div>
+
+          <div class = "row">
+            <p>I then tested controlling an LED with a button through the code found <a href = "https://create.arduino.cc/projecthub/SBR/working-with-an-led-and-a-push-button-71d8c1">here</a>.
+            </p>
+          </div>
+          <div class = "row">
+            <div class = "col">
+              <video>
+                <source src= './week_4_mmedia/but_test.mov'>
+              </video>
+            </div>
+
+            <div class = "col">
+            </div>
+
+          </div>
+
+          <div class = "container">
+            <div class = "row">
+              <p>In my initial attempt to create an LED piano, which is how I describe a group of LEDs each controlled by a separate button, I expanded the button model, only having inputs for the buttons. This did not work, as I also needed inputs for each LED to be able to control them.</p>
+            </div>
+            <div class = "row">
+              <!-- FIX WIDTH AND HEIGHTT -->
+              <img src='./week_4_media/but_test_2.JPG' height="100px" width="auto">
+            </div>
+
+            <div class = "row">
+              <p>In my final circuit each LED has its own input into the microcontroller, allowing me to control whether the LED was on or off when not pressing the button. However, one of the LEDs did not work. The circuit and code seemed correct and also functioned on the other two LEDs. After changing all the parts in the 3rd LED - wires, bulb, resistors - I was unable to pinpoint why it wasn’t working. My final code was the following.</p>
+            </div>
+            <div class = "row">
+              <img src='./week_4_media/led_piano_1.JPG'>
+            </div>
+          </div>
+
+          <div class = "row">
+            <p><strong>Conclusions: </strong>
+              <!-- INSERT TEXT -->
+            </p>
+
           </div>
         </div>
     </div>
