@@ -63,7 +63,8 @@
           <div class = "row">
             <div class = "col">
               <video>
-                <source src= './week_4_mmedia/but_test.mov'>
+                <source src= './week_4_mmedia/but_test.mov'
+                type="video/mp4">
               </video>
             </div>
 
@@ -83,10 +84,65 @@
 
             <div class = "row">
               <p>In my final circuit each LED has its own input into the microcontroller, allowing me to control whether the LED was on or off when not pressing the button. However, one of the LEDs did not work. The circuit and code seemed correct and also functioned on the other two LEDs. After changing all the parts in the 3rd LED - wires, bulb, resistors - I was unable to pinpoint why it wasn’t working. My final code was the following.</p>
+
+              <pre><code>
+                const int BUT1 = 4;
+                const int BUT2 = 3;
+                const int BUT3 = 2;
+                const int LED1 = 7;
+                const int LED2 = 6;
+                const int LED3 = 5;
+                int BUTTONstate1 = 0;
+                int BUTTONstate2 = 0;
+                int BUTTONstate3 = 0;
+
+                void setup()
+                {
+                  pinMode(BUT1, INPUT);
+                  pinMode(LED1, OUTPUT);
+                  pinMode(BUT2, INPUT);
+                  pinMode(LED2, OUTPUT);
+                  pinMode(BUT3, INPUT);
+                  pinMode(LED3, OUTPUT);
+                }
+
+                void loop()
+                {
+                  BUTTONstate1 = digitalRead(BUT1);
+                  if (BUTTONstate1 == HIGH)
+                  {
+                    digitalWrite(LED1, HIGH);
+                  }
+                  else{
+                    digitalWrite(LED1, LOW);
+                  }
+
+                  BUTTONstate2 = digitalRead(BUT2);
+                  if (BUTTONstate2 == HIGH)
+                  {
+                    digitalWrite(LED2, HIGH);
+                  }
+                  else{
+                    digitalWrite(LED2, LOW);
+                  }
+
+                  BUTTONstate3 = digitalRead(BUT3);
+                  if (BUTTONstate3 == HIGH)
+                  {
+                    digitalWrite(LED3, HIGH);
+                  }
+                  else{
+                    digitalWrite(LED3, LOW);
+                  }
+                }
+              </code></pre>
+
             </div>
             <div class = "row">
-              <img src='./week_4_media/led_piano_1.JPG'>
+              <img src='./week_4_media/led_piano_1.JPG'
+              type="video/mp4">
             </div>
+
           </div>
 
           <div class = "row">
