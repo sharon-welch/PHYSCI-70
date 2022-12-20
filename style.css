@@ -14,11 +14,43 @@
   text-align: right;
 }
 
+/*.container {*/
+/*  margin-left: 50px;*/
+/*  margin-right: 50px;*/
+/*}*/
+
+.main {
+  margin-left: 50px;
+  margin-right: 50px;
+}
 .title {
     text-align: left;
     margin-left: 100px;
     color: #99e6b3;
     font-weight: bold;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/*pre {*/
+/*  background-color: lightgray;*/
+/*  border: darkgray;*/
+/*}*/
+
+.fit-image {
+  width: 100%;
+}
+
+.fit-video {
+  /*height: 100%;*/
+  width: 250px;
+}
+
+.fit-video-horiz {
+  width: 100%;
 }
 
 a {
@@ -51,6 +83,16 @@ a[href* = './aboutme'] {
   max-width: auto;
   padding-bottom: 40px;
 } */
+
+pre {
+  padding-left: 50px;
+  padding-right: 50px;
+  overflow: scroll;
+  height: 500px;
+  background: lightgray 0.5%;
+
+
+}
 
 img{
   height: auto;

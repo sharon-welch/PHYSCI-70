@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sharon Welch</title>
+        <link href='style.css' rel='stylesheet'>
+        <link href="./assets/bootstrap/css/bootstrap.css" media="all" type="text/css" rel="stylesheet">
+    </head>
+
+    <body>
+    <div class>
+        <div class="header">
+            <a href="./index.html" style= "text-decoration: none;">Weekly Assignments</a>
+            <a href = "./finalproj.html" style= "text-decoration: none;">Final Project</a>
+            <a href="./aboutme.html" style= "text-decoration: none;">About Me</a>
+        </div>
+
+        <div class="main">
+            <div class="title">
+                <h2>Week 6: Electronic Input Devices</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <p><strong>Task: </strong>
+                        Make a capacitive sensor to measure a physical quantity with your microcontroller.</p>
+                    <br>
+                    <p><strong>Skills used: </strong> hand making, arduino</p>
+                    <p>This week I made my own FSR sensor to measure pressure. I used copper sheet, velostat, foamcore, and wires.</p>
+                </div>
+                <div class="row">
+                    <p>The gif below illustrates the process of making the sensor </p>
+                    <div class="col-6">
+                        <img src = './week_6_media/wk6_FSR.gif' class="img-responsive fit-image">
+                    </div>
+                    <div class="col-6">
+                        <video src= './week_6_media/wk6_FSR_video.MOV' class="video-responsive fit-video" controls="controls">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <p>One thing that I noticed in experimenting with different levels of pressure is that the sensor isn’t very accurate. At first this was because I had a 5 second delay between readings, so I would have to maintain sustained pressure on the sensor for it to read the value. I fixed this by making the delay shorter.
+                    </p>
+                    <pre>
+                        <code>
+                            int FSR = A0; //the FSR is connected to analog pin 0 (A0)
+
+                            void setup(){
+                            Serial.begin(9600);
+                            }
+
+                            void loop(){
+                            int FSRValue = analogRead(FSR);//this takes a reading of the analog value of the FSR
+
+                            Serial.println(FSRValue);//this gives a printout of the reading of the analog value that is measured
+                            delay(100);
+                            }
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="row">
+                    <img src = './week_6_media/wk6_FSR_3_handmade.JPG' class="img-responsive fit-image">
+
+                </div>
+
+                <div class="row">
+                    <div class="row">
+                        <h3>FSR Sensor Prototypes for Final Project</h3>
+                        <p>For the final project I will be using fabric FSR sensors to measure pressure. I plan to use fabric so that it is flexible and can mold to the bike seat. To make the fabric sensors I followed a similar process, except that the conductive material (copper sheets) is placed one on top of the other (instead of side by side) with velostat in between.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <img src = './week_6_media/FSR_final_1.JPG' class="img-responsive fit-image">
+                        </div>
+                        <div class="col">
+                            <img src = './week_6_media/FSR_final_2.JPG' class="img-responsive fit-image">
+                        </div>
+                        <div class="col">
+                            <img src = './week_6_media/FSR_final_3.JPG' class="img-responsive fit-image">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
