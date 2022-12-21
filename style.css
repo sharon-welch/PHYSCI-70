@@ -30,6 +30,10 @@
     font-weight: bold;
 }
 
+.text-center {
+  text-align: center;
+}
+
 h3 {
   font-size: 14px;
   font-weight: bold;
@@ -56,7 +60,7 @@ h3 {
 a {
   padding: 15px;
   color: darkgray;
-  background:#99e6b3;
+  /*background:#99e6b3;*/
   text-decoration: none;
 }
 

@@ -12,146 +12,118 @@
       <a href="./aboutme.html" style= "text-decoration: none;">About Me</a>
     </div>
 
-    <div class="main">
+    <div class = "container">
       <div class="title">
-        <h5>Week 4: Microconntroller Programming</<h5>
+        <h2>Week 4: Microcontroller Programming</<h2>
       </div>
 
-      <div class = "container">
-        <div class = "row">
-          <p><strong>Task: </strong>
-            Program an Arduino board to do something</p>
-            <br>
-          <p><strong>Skills used: </strong>Arduino, C Programming Language</p>
-            <br>
-          <p>This week I experimented with programming LEDs. This week I experimented with programming LEDs to create a circuit that would allow me to turn a series of LEDs on with a button. </p>
+      <div class = "row">
+        <p><strong>Task: </strong>
+          Program an Arduino board to do something</p>
+          <br>
+        <p><strong>Skills used: </strong>Arduino, C Programming Language</p>
+          <br>
+        <p>This week I experimented with programming LEDs to create a circuit that would allow me to turn a series of LEDs on with buttons.</p>
+      </div>
+
+
+      <div class = "row">
+        <div class = "col">
+          <video src= './week_4_media/led_piano_1.MOV' class="video-responsive fit-video-horiz" controls="controls">
+        </div>
+        <div class = "col">
+          <!-- INSERT IMAGE OR TEXT -->
+        </div>
+      </div>
+
+      <div class = "row">
+        <h3>Prototype</h3>
+        <p>I experimented first with creating a series of blinking LEDs through modifying the code found <a href = "https://www.youtube.com/watch?v=e1FVSpkw6q4">here</a></p>
+        <p>I then tested controlling an LED with a button through the code found <a href = "https://create.arduino.cc/projecthub/SBR/working-with-an-led-and-a-push-button-71d8c1">here</a>.
+        </p>
+      </div>
+
+      <div class = "row">
+        <div class = "col">
+          <video src= './week_4_media/but_test.mov' class="video-responsive fit-video-horiz" controls="controls">
+
         </div>
 
-        <div class = "container">
-          <div class = "row">
-            <div class = "col">
-              <video width = "320" height="auto">
-                <source src = './week_4_media/led_piano_1.MOV'>
-              </video>
-              <!-- INSERT IMAGE OR TEXT -->
-            </div>
-            <div class = "col">
-              <!-- INSERT IMAGE OR TEXT -->
-            </div>
-          </div>
-
-          <div class = "row">
-            <p><strong>Process: </strong>
-              I experimented first with creating a series of blinking LEDs through modifying the code found <a href = "https://www.youtube.com/watch?v=e1FVSpkw6q4">here</a>.
-            </p>
-
-          </div>
-
-          <div class = "row">
-            <div class = "col">
-
-            </div>
-            <div class = "col">
-            </div>
-
-          </div>
-
-          <div class = "row">
-            <p>I then tested controlling an LED with a button through the code found <a href = "https://create.arduino.cc/projecthub/SBR/working-with-an-led-and-a-push-button-71d8c1">here</a>.
-            </p>
-          </div>
-          <div class = "row">
-            <div class = "col">
-              <video>
-                <source src= './week_4_mmedia/but_test.mov'
-                type="video/mp4">
-              </video>
-            </div>
-
-            <div class = "col">
-            </div>
-
-          </div>
-
-          <div class = "container">
-            <div class = "row">
-              <p>In my initial attempt to create an LED piano, which is how I describe a group of LEDs each controlled by a separate button, I expanded the button model, only having inputs for the buttons. This did not work, as I also needed inputs for each LED to be able to control them.</p>
-            </div>
-            <div class = "row">
-              <!-- FIX WIDTH AND HEIGHTT -->
-              <img src='./week_4_media/but_test_2.JPG' height="100px" width="auto">
-            </div>
-
-            <div class = "row">
-              <p>In my final circuit each LED has its own input into the microcontroller, allowing me to control whether the LED was on or off when not pressing the button. However, one of the LEDs did not work. The circuit and code seemed correct and also functioned on the other two LEDs. After changing all the parts in the 3rd LED - wires, bulb, resistors - I was unable to pinpoint why it wasn’t working. My final code was the following.</p>
-
-              <pre><code>
-                const int BUT1 = 4;
-                const int BUT2 = 3;
-                const int BUT3 = 2;
-                const int LED1 = 7;
-                const int LED2 = 6;
-                const int LED3 = 5;
-                int BUTTONstate1 = 0;
-                int BUTTONstate2 = 0;
-                int BUTTONstate3 = 0;
-
-                void setup()
-                {
-                  pinMode(BUT1, INPUT);
-                  pinMode(LED1, OUTPUT);
-                  pinMode(BUT2, INPUT);
-                  pinMode(LED2, OUTPUT);
-                  pinMode(BUT3, INPUT);
-                  pinMode(LED3, OUTPUT);
-                }
-
-                void loop()
-                {
-                  BUTTONstate1 = digitalRead(BUT1);
-                  if (BUTTONstate1 == HIGH)
-                  {
-                    digitalWrite(LED1, HIGH);
-                  }
-                  else{
-                    digitalWrite(LED1, LOW);
-                  }
-
-                  BUTTONstate2 = digitalRead(BUT2);
-                  if (BUTTONstate2 == HIGH)
-                  {
-                    digitalWrite(LED2, HIGH);
-                  }
-                  else{
-                    digitalWrite(LED2, LOW);
-                  }
-
-                  BUTTONstate3 = digitalRead(BUT3);
-                  if (BUTTONstate3 == HIGH)
-                  {
-                    digitalWrite(LED3, HIGH);
-                  }
-                  else{
-                    digitalWrite(LED3, LOW);
-                  }
-                }
-              </code></pre>
-
-            </div>
-            <div class = "row">
-              <img src='./week_4_media/led_piano_1.JPG'
-              type="video/mp4">
-            </div>
-
-          </div>
-
-          <div class = "row">
-            <p><strong>Conclusions: </strong>
-              <!-- INSERT TEXT -->
-            </p>
-
-          </div>
+        <div class = "col">
         </div>
+
+      </div>
+
+      <div class = "row">
+        <p>In my initial attempt to create an LED piano, which is how I describe a group of LEDs each controlled by a separate button, I used the buttoon model above. I tried only having inputs for the buttons. This did not work, as I also needed inputs for each LED to be able to control them.</p>
+      </div>
+
+      <div class = "row">
+        <!-- FIX WIDTH AND HEIGHTT -->
+        <img src='./week_4_media/but_test_2.JPG' height="100px" width="auto">
+      </div>
+
+      <div class = "row">
+        <h3>Final LED Piano</h3>
+        <p>In my final circuit each LED has its own input into the microcontroller, allowing me to control whether the LED was on or off when not pressing the button. However, one of the LEDs did not work. The circuit and code seemed correct and also functioned on the other two LEDs. After changing all the parts in the 3rd LED - wires, bulb, resistors - I was unable to pinpoint why it wasn't working. My final code was the following.</p>
+
+        <pre><code>
+          const int BUT1 = 4;
+          const int BUT2 = 3;
+          const int BUT3 = 2;
+          const int LED1 = 7;
+          const int LED2 = 6;
+          const int LED3 = 5;
+          int BUTTONstate1 = 0;
+          int BUTTONstate2 = 0;
+          int BUTTONstate3 = 0;
+
+          void setup()
+          {
+            pinMode(BUT1, INPUT);
+            pinMode(LED1, OUTPUT);
+            pinMode(BUT2, INPUT);
+            pinMode(LED2, OUTPUT);
+            pinMode(BUT3, INPUT);
+            pinMode(LED3, OUTPUT);
+          }
+
+          void loop()
+          {
+            BUTTONstate1 = digitalRead(BUT1);
+            if (BUTTONstate1 == HIGH)
+            {
+              digitalWrite(LED1, HIGH);
+            }
+            else{
+              digitalWrite(LED1, LOW);
+            }
+
+            BUTTONstate2 = digitalRead(BUT2);
+            if (BUTTONstate2 == HIGH)
+            {
+              digitalWrite(LED2, HIGH);
+            }
+            else{
+              digitalWrite(LED2, LOW);
+            }
+
+            BUTTONstate3 = digitalRead(BUT3);
+            if (BUTTONstate3 == HIGH)
+            {
+              digitalWrite(LED3, HIGH);
+            }
+            else{
+              digitalWrite(LED3, LOW);
+            }
+          }
+        </code></pre>
+
+      </div>
+
+      <div class = "row">
+        <video src= './week_4_media/led_piano_1.MOV' class="video-responsive fit-video" controls="controls">
+      </div>
     </div>
 
 
